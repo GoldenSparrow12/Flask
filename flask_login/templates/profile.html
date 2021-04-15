@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+{% block title %} Profile Page {%endblock%}
+
+{% block content %}
+<section class="hero is-success is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ session['username'].split(".")[0].split("@")[0].rstrip('0123456789').upper() }}'s Profile Page
+      </h1>
+    </div>
+  </div>
+</section>
+{%endblock%}

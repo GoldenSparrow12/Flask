@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block title %} Register {%endblock%}
+{% block link %}
+<link rel="stylesheet" href="{{url_for('static',filename = 'register.css')}}">
+{%endblock%}
+
+
+{%block content %}
+<div class="login">
+  <h2 class="login-header">Sign in</h2>
+
+  <form action="/register" method="POST" class="login-container">
+    <p><input id="username" name="username" type="email" placeholder="Email or Username"></p>
+    <p><input id="password" name="password" type="password" placeholder="Password"></p>
+    <p><input type="submit" value="Sign in"></p>
+    <p>{{ msg }}</p>
+    <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+  </form>
+</div>
+{%endblock%}
